@@ -1,0 +1,45 @@
+//String intern()
+
+class Launch
+{
+	public static void main(String[]args)
+	{
+		//Example:1
+
+		String s1=new String("GQT");
+		String s2=s1.intern();
+		System.out.println(s1==s2);
+		String s3=s2.intern();
+		System.out.println(s2==s3);
+
+		//Example:2
+
+		char[] c={'G'+'Q'+'T'};
+		String s4=new String(c);
+		String s5=s4.intern();
+		System.out.println(s4==s5);
+
+		//Example:3
+
+		String s6="GQTGQT";
+		String s7=new String("GQT");
+		String s8=s2.concat("GQT");
+		String s9=s8.intern();
+		System.out.println(s8==s9);
+		System.out.println(s6==s9);
+
+
+		//Right Way Of Using intern() method
+		String s10="ABC";
+		/*---
+		-----
+		-----
+		100 lines of code
+		-----
+		-----
+		-----
+		*/
+		String s11=new String("ABC").intern();
+		System.out.println(s10==s11);
+	}
+}
