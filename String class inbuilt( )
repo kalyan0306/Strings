@@ -1,0 +1,106 @@
+import java.util.*;
+import java.util.StringJoiner;
+class Launch
+{
+	public static void main(String[]args)
+	{
+		String s="RajaRamMohanRoy";
+		System.out.println(s);
+		System.out.println(s.charAt(4));
+		System.out.println(s.codePointAt(4));
+		System.out.println(s.indexOf('R'));
+		System.out.println(s.indexOf('g'));
+		System.out.println(s.indexOf('R',3));
+		System.out.println(s.indexOf("Ra"));
+		System.out.println(s.indexOf("Ra",2));
+		System.out.println(s.indexOf("ma"));
+		System.out.println(s.lastIndexOf('R'));
+		System.out.println(s.lastIndexOf('R',11));
+		System.out.println(s.lastIndexOf("aR"));
+		System.out.println(s.lastIndexOf("aR",2));
+		System.out.println(s.length());
+		System.out.println(s.toUpperCase());
+		System.out.println(s);
+		System.out.println(s.toLowerCase());
+		System.out.println(s.substring(7));
+		System.out.println(s.substring(7,12));
+		System.out.println(s.contains("Ram"));
+		System.out.println(s.contains("sita"));
+		System.out.println(s.startsWith("Raja"));
+		System.out.println(s.startsWith("Roja"));
+		System.out.println(s.endsWith("Roy"));
+		System.out.println(s.endsWith("Ray"));
+		System.out.println(s.startsWith("Ram",4));
+		String s1="BrijMohan";
+		System.out.println(s.regionMatches(7,s1,4,5));
+		System.out.println(s.regionMatches(true,7,s1,4,5));
+		System.out.println(s.regionMatches(false,7,s1,4,5));
+
+		//join()
+
+		//System.out.println(String.joi("-","Raja","Ram","Mohan","Roy")n);
+		StringJoiner joiner=new StringJoiner("-");
+		joiner.add("C").add("C++").add("Java");
+		
+		
+		
+		System.out.println(joiner );
+
+
+		//split()
+		//Example:1
+
+		String[] a=s.split("a");
+		for(String elem:a)
+		{
+			System.out.println(elem);
+		}
+
+		//Example:2
+		
+		String[] b=s.split("a",2);
+		for(String elem:b)
+		{
+			System.out.println(elem);
+		}
+
+		//Example:3
+
+		String s2="RajaZabiRamZabiMohanZabiRoy";
+		String[] c=s2.split("Zabi",3);
+		for(String elem:c)
+		{
+			System.out.println(elem);
+		}
+
+		//Example:4
+
+		String [] d=s.split("");
+		for(String elem:d)
+		{
+			System.out.println(elem);
+		}
+
+		//Example:5
+
+		String s3="Think Twice Code Once";
+		String[] e=s3.split(" ");
+		for(String elem:e)
+		{
+			System.out.println(elem);
+		}
+
+		//replace()
+		//Exampl:1
+
+		System.out.println(s.replace('R','r'));
+		System.out.println(s.replace("Ra","rA"));
+		
+		//Example:2
+
+		String s4="  Raja  Ram  Mohan Roy ";
+		System.out.println(s4.trim());
+
+		System.out.println(s4.replace(" ",""));
+	}
+}
