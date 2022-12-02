@@ -1,0 +1,47 @@
+// Two types of compare() methods
+class Launch
+{
+	public static void main(String[]args)
+	{
+
+		//1.compareTo() method
+
+		//Example:1
+
+		String s1="SACHIN";
+		String s2="SACHIN";
+		int str=s1.compareTo(s2);
+		if(str==0)
+		{
+			System.out.println("both values are same");
+		}
+		else if(str>0)
+		{
+			System.out.println("String1> String2");
+		}
+		else
+		{
+			System.out.println("String2> String1");
+		}
+
+		//2.compareToIgnoreCase() method
+
+		//Example:1
+
+		String s3="SACHIN";
+		String s4="sachin";
+		int st=s3.compareToIgnoreCase(s4);
+		if(st==0)
+		{
+			System.out.println("String3 is equal to String4");
+		}
+		else if(str>0)
+		{
+			System.out.println("String1> String2");
+		}
+		else
+		{
+			System.out.println("String2> String1");
+		}
+	}
+}
