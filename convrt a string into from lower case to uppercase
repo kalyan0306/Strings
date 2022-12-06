@@ -1,0 +1,50 @@
+class Launch
+{
+	public static void main(String[]args)
+	{
+	//Program to convert a String into Uppercase without using the inbulit() method
+		
+
+		String s="global";
+		String s1="";
+		for(int i=0;i<=s.length()-1;i++)
+		{
+			s1=s1+(char)(s.charAt(i)-32);
+		}
+		System.out.println(s1);
+    
+    //program to convert a string into lower case without using the inbuilt() .LowerCase()[inbiut() method]
+    
+    
+		String s2="GLOBAL";
+		String s3="";
+		for(int j=0;j<=s2.length()-1;j++)
+		{
+			s3=s3+(char)(s2.charAt(j)+32);
+		}
+		System.out.println(s3);
+
+		//program to convert  all the Characters in a String to opposite case:
+
+		String s4="gLoBaL";
+		String s5="";
+		for(int i=0;i<=s4.length()-1;i++)
+		
+		{
+			char ch=s4.charAt(i);
+			if(ch>='a'&& ch<='z')
+			{
+				s5=s5+(char)(ch-32);
+			}
+			else if(ch>='A' && ch<='Z')
+			{
+				s5=s5+(char)(ch+32);
+			}
+			else
+			{
+				s5=s5+ch;
+			}
+		}
+		System.out.println(s5);
+	}
+}
