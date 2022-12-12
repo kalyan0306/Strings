@@ -1,0 +1,25 @@
+//PROGRAM TO CHECK IF TWO STRINGS ARE ANAGRAM
+import java.util.Arrays;
+class Launch
+{
+	public static void main(String[]args)
+	{
+		String s1="school master";
+		String s2="The classroom";
+		s1=s1.replace(" ","");
+		s2=s2.replace(" " ,"");
+		char[]a1=s1.toCharArray();
+		char[]a2=s2.toCharArray();
+		Arrays.sort(a1);
+		Arrays.sort(a2);
+
+		if (Arrays.equals(a1,a2))
+		{
+			System.out.println("They are ANAGRAMS");
+		}
+		else
+		{
+			System.out.println("They are NoT ANAGRAMS");
+		}
+	}
+}
