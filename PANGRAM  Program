@@ -1,0 +1,32 @@
+//PROGRAM FOR PANGRAM
+class Launch
+{
+	public static void main(String[]args)
+	{
+		String s="THE QUICK BROWN FOX JUMPS OVER A LAZY DOG";
+		s=s.replace(" ","");
+		char[]a=s.toCharArray();
+		int[]res=new int[26];
+		for(int i=0;i<=a.length-1;i++)
+		{
+			res[a[i]-65]++;
+		}
+		int flag=0;
+		for(int i=0;i<=res.length-1;i++)
+		{
+			if(res[i]==0)
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+		{
+			System.out.println("THE GIVEN STRING IS PANGRAM");
+		}
+		else
+		{
+			System.out.println("THE GIVEN STRING IS NOT PANGRAM");
+		}
+	}
+}
