@@ -1,0 +1,22 @@
+//PROGRAM FOR A GIVEN STRING FIND THE DUPLICATE CHARECTERS/REPEATED CHARECTERS
+class Launch
+{
+	public static void main(String[]args)
+	{
+		String s="THE QUICK BROWN FOX JUMPS OVER A LAZY DOG";
+		s=s.replace(" ","");
+		char[]a=s.toCharArray();
+		int[]res=new int[26];
+		for(int i=0;i<=a.length-1;i++)
+		{
+			res[a[i]-65]++;
+		}
+		for(int i=0;i<=res.length-1;i++)
+		{
+			if(res[i]>1)
+			{
+				System.out.println((char)(i+65));
+			}
+		}
+	}
+}
